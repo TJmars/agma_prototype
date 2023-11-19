@@ -1,0 +1,320 @@
+{% extends 'agma/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div>
+  <h1 class="titleText">agma</h1>
+  <p class="point" id="total_count">0<span style="font-size: 20px;">Pt</span></p>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 0)"></div>
+          <div class="square" onclick="changeLetter(this, 1)"></div>
+          <div class="square" onclick="changeLetter(this, 2)"></div>
+          <div class="square" onclick="changeLetter(this, 3)"></div>
+          <div class="square" onclick="changeLetter(this, 4)"></div>
+          <div class="square" onclick="changeLetter(this, 5)"></div>
+          <div class="square" onclick="changeLetter(this, 6)"></div>
+  </div>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 7)"></div>
+          <div class="square" onclick="changeLetter(this, 8)"></div>
+          <div class="square" onclick="changeLetter(this, 9)"></div>
+          <div class="square" onclick="changeLetter(this, 10)"></div>
+          <div class="square" onclick="changeLetter(this, 11)"></div>
+          <div class="square" onclick="changeLetter(this, 12)"></div>
+          <div class="square" onclick="changeLetter(this, 13)"></div>
+  </div>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 14)"></div>
+          <div class="square" onclick="changeLetter(this, 15)"></div>
+          <div class="square" onclick="changeLetter(this, 16)"></div>
+          <div class="square" onclick="changeLetter(this, 17)"></div>
+          <div class="square" onclick="changeLetter(this, 18)"></div>
+          <div class="square" onclick="changeLetter(this, 19)"></div>
+          <div class="square" onclick="changeLetter(this, 20)"></div>
+  </div>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 21)"></div>
+          <div class="square" onclick="changeLetter(this, 22)"></div>
+          <div class="square" onclick="changeLetter(this, 23)"></div>
+          <div class="square" onclick="changeLetter(this, 24)"></div>
+          <div class="square" onclick="changeLetter(this, 25)"></div>
+          <div class="square" onclick="changeLetter(this, 26)"></div>
+          <div class="square" onclick="changeLetter(this, 27)"></div>
+  </div>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 28)"></div>
+          <div class="square" onclick="changeLetter(this, 29)"></div>
+          <div class="square" onclick="changeLetter(this, 30)"></div>
+          <div class="square" onclick="changeLetter(this, 31)"></div>
+          <div class="square" onclick="changeLetter(this, 32)"></div>
+          <div class="square" onclick="changeLetter(this, 33)"></div>
+          <div class="square" onclick="changeLetter(this, 34)"></div>
+  </div>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 35)"></div>
+          <div class="square" onclick="changeLetter(this, 36)"></div>
+          <div class="square" onclick="changeLetter(this, 37)"></div>
+          <div class="square" onclick="changeLetter(this, 38)"></div>
+          <div class="square" onclick="changeLetter(this, 39)"></div>
+          <div class="square" onclick="changeLetter(this, 40)"></div>
+          <div class="square" onclick="changeLetter(this, 41)"></div>
+  </div>
+  <div class="container">
+          <div class="square" onclick="changeLetter(this, 42)"></div>
+          <div class="square" onclick="changeLetter(this, 43)"></div>
+          <div class="square" onclick="changeLetter(this, 44)"></div>
+          <div class="square" onclick="changeLetter(this, 45)"></div>
+          <div class="square" onclick="changeLetter(this, 46)"></div>
+          <div class="square" onclick="changeLetter(this, 47)"></div>
+          <div class="square" onclick="changeLetter(this, 48)"></div>
+  </div>
+
+  <form action="submit-url" method="post">
+  <input type="text" id="inputField" name="inputName" placeholder="input the answer" class="rounded-input">
+  <button type="button" class="custom-button" onclick="checkAnswer()">Answer</button>
+  </form>
+
+  <p style="margin-top:50px; margin-left:20px;font-size: 20px;margin-bottom:10px;">Memo</p>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+  <div class="container">
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+          <div class="squareMemo"><input type="text"></div>
+  </div>
+<div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const initialString = "bxtjxmhnmozjoghmnfchrnkckgzshforhcxhmdrtzamcnrcm?";
+    const newString = "whichseasoncomesafterautumnbeforethespringstarts?";
+    const squares = document.querySelectorAll('.square');
+    let totalClicks = 0;
+
+    initialString.split('').forEach((char, index) => {
+      if (squares[index]) {
+        squares[index].textContent = char;
+      }
+    });
+
+
+    window.changeLetter = function(element, index) {
+      if (element.getAttribute('data-clicked') === 'true') {
+        // 既にクリックされている場合は何もしない
+        return;
+      }
+
+      const clickedChar = element.textContent;
+
+      // 同じ文字を持つ全てのsquareを更新
+      squares.forEach((sq, idx) => {
+        if (sq.textContent === clickedChar && idx < newString.length) {
+          sq.textContent = newString[idx];
+          sq.style.backgroundColor = '#FF6948';
+          sq.setAttribute('data-clicked', 'true');
+        }
+      });
+
+      totalClicks += 1;
+      document.getElementById('total_count').textContent = totalClicks + 'Pt';
+    };
+  });
+
+
+  function checkAnswer() {
+  var inputVal = document.getElementById('inputField').value;
+  if (inputVal === 'abcde') {
+    window.location.href = 'correct.html'; // abcdeに一致した場合の遷移
+  } else {
+    window.location.href = 'incorrect.html'; // それ以外の場合の遷移
+  }
+}
+
+
+  </script>
+
+{% endblock %}
