@@ -132,7 +132,7 @@
     <div class="container">
 <div>
   <h1 class="titleText">agma</h1>
-  <p class="point" id="total_count">0<span style="font-size: 20px;">Pt</span></p>
+  <p class="point" id="total_count">50<span style="font-size: 20px;">Pt</span></p>
   <div class="container">
           <div class="square" onclick="changeLetter(this, 0)"></div>
           <div class="square" onclick="changeLetter(this, 1)"></div>
@@ -400,7 +400,7 @@
     const initialString = "bxtjxmhnmozjoghmnfchrnkckgzshforhcxhmdrtzamcnrcm?";
     const newString = "whichseasoncomesafterautumnbeforethespringstarts?";
     const squares = document.querySelectorAll('.square');
-    let totalClicks = 0;
+    let totalClicks = 50;
 
     initialString.split('').forEach((char, index) => {
       if (squares[index]) {
@@ -426,7 +426,7 @@
         }
       });
 
-      totalClicks += 1;
+      totalClicks -= 1;
       document.getElementById('total_count').textContent = totalClicks + 'Pt';
     };
   });
@@ -435,10 +435,14 @@
   function checkAnswer() {
   var inputVal = document.getElementById('inputField').value;
   if (inputVal === 'abcde') {
-    window.location.href = 'correct.html'; // abcdeに一致した場合の遷移
+    window.location.href = 'https://tjmars.github.io/agma_prototype/correct'; // abcdeに一致した場合の遷移
   } else {
-    window.location.href = 'incorrect.html'; // それ以外の場合の遷移
+    window.location.href = 'https://tjmars.github.io/agma_prototype/incorrect'; // それ以外の場合の遷移
   }
+}
+
+    function sendCount() {
+  window.location.href = 'correct.html?totalClicks=' + totalClicks;
 }
 
 
