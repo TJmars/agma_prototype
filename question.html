@@ -435,15 +435,13 @@
   function checkAnswer() {
   var inputVal = document.getElementById('inputField').value;
   if (inputVal === 'abcde') {
-    window.location.href = 'https://tjmars.github.io/agma_prototype/correct'; // abcdeに一致した場合の遷移
+    window.location.href = 'https://tjmars.github.io/agma_prototype/correct?totalClicks=' + totalClicks;
   } else {
     window.location.href = 'https://tjmars.github.io/agma_prototype/incorrect'; // それ以外の場合の遷移
   }
 }
 
-    function sendCount() {
-  window.location.href = 'correct.html?totalClicks=' + totalClicks;
-}
+   
 
 
   </script>
