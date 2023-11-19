@@ -132,10 +132,21 @@
     <div class="container">
       <div style="margin-top:30vh;text-align: center;">
   <h1 style="color:#26B1A9;">COLLECT</h1>
-  <p style="font-size: 80px;font-weight: bold;color: #FF8B03;">31<span style="font-size: 50px;">Pt</span></p>
+  <p style="font-size: 80px;font-weight: bold;color: #FF8B03;" id="countDisplay><span style="font-size: 50px;">Pt</span></p>
 </div>
 
       </div>
+
+    
+<script>
+  window.onload = function() {
+    var params = new URLSearchParams(window.location.search);
+    var count = params.get('count');
+    if (count !== null) {
+      document.getElementById('countDisplay').textContent = count;
+    }
+  }
+</script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
