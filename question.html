@@ -433,9 +433,9 @@
 
 
   function checkAnswer() {
-  var inputVal = document.getElementById('inputField').value.toLowerCase();
+  var inputVal = document.getElementById('inputField').value.toLowerCase(); // 入力値を小文字に変換
   if (inputVal === 'jupiter') {
-    window.location.href = 'https://tjmars.github.io/agma_prototype/correct';
+    window.location.href = 'https://tjmars.github.io/agma_prototype/correct?totalClicks=' + totalClicks;
   } else {
     window.location.href = 'https://tjmars.github.io/agma_prototype/incorrect'; // それ以外の場合の遷移
   }
